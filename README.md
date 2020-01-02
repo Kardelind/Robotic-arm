@@ -49,7 +49,7 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 ![Holders for the switches](Pictures/box%20for%20switches.png)
 
-[stl file for left side](Projects/sensorholders/sensorholder_left.stl)
+[stl file for left side](Projects/sensorholders/sensorholder_left.stl) and 
 [stl file for right side](Projects/sensorholders/sensorholder_right.stl)  
 
 ![Lever for the hand](Pictures/hand%20lever.png)
