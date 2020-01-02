@@ -1,5 +1,5 @@
 # How I stoped fearing robotics and came to love arduinos
-Hello there and welcome to our web page for how to make a "simple" EMG controlled prosthetic. Here you'll find a link to the report , schematics for the senor boards used in this project, 3D print files in both 3D print ready format (stl) and editable format (dwg).  
+Hello there and welcome to our web page for how to make a "simple" EMG controlled prosthetic. Here you'll find a link to the report , schematics for the senor boards used in this project, arduino code used in the project, 3D print files in both 3D print ready format (stl) and editable format (dwg).  
 
 ## How to use Jekyll
 [Jekyll-theme](https://github.com/mmistakes/jekyll-theme-basically-basic/blob/master/README.md#ruby-gem-method)
