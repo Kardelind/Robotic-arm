@@ -4,6 +4,11 @@
 ## Our report
 [Our report in pdf form](https://drive.google.com/file/d/135nqrgYZVhD_CpQoTayHe5q2DdZN0q2t/view?usp=sharing)
 
+## Filter Code
+```terminal
+add some code in here, if not all of it
+```
+
 ## Pictures and files
 ![Ballbearing holder](Pictures/Ballbearingholder.png)
 
