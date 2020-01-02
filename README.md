@@ -38,3 +38,9 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 # Test
 [Our report in pdf form](https://drive.google.com/file/d/135nqrgYZVhD_CpQoTayHe5q2DdZN0q2t/view?usp=sharing)
+
+![Image](https://drive.google.com/open?id=1KJxYKxhvy7b7lVsBVQFdBXINdMoYW1kA)
+![Image](https://drive.google.com/open?id=1s4bW06ocgThyEhhmErUEVqLf8-7YeR0z)
+![Image](https://drive.google.com/open?id=1InZfmUz_jmw3uWb5EnLyrqHV3sL1lVUj)
+![Image](https://drive.google.com/open?id=1M7CWqbQqIb_KORKzW6NPh04PkB9RQ_te)
+![Image](https://drive.google.com/open?id=1HPnpDQQ7trdabl6J-4znPMWZrbpSSLo8)
