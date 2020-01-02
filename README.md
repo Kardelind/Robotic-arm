@@ -3,14 +3,13 @@ Hello there and welcome to our web page for how to make a "simple" EMG controlle
 
 ## How to use Jekyll
 [Jekyll-theme](https://github.com/mmistakes/jekyll-theme-basically-basic/blob/master/README.md#ruby-gem-method)
----
+
 ## Table of content
 1. [Our report](#Our-report)
 2. [Filter Code](#Filter-Code)
 3. [Sensorboard](#Sensorboard)
 4. [Pictures and files](#Pictures-and-files)
-5. []()
----
+
 ## Our report
 [Our report in pdf form](https://drive.google.com/file/d/135nqrgYZVhD_CpQoTayHe5q2DdZN0q2t/view?usp=sharing)
 
