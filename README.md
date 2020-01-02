@@ -15,13 +15,13 @@ add some code in here, if not all of it
 ## Pictures and files
 ![Ballbearing holder](Pictures/Ballbearingholder.png)
 
-[stl file](Projects/roller_that_works_like_a_holder/roller_that_works_like_a_holder.stl) &
-[dwg file](Projects/roller_that_works_like_a_holder/roller_that_works_like_a_holder.dwg)  
+[stl file](Projects/Holder_Ball_Bearing_1mm_off/Holder_Ball_Bearing_1mm_off.stl) &
+[dwg file](Projects/Holder_Ball_Bearing_1mm_off/Holder_Ball_Bearing_1mm_off.dwg)  
 
 ![Holder for the bolt](Pictures/Holder%20for%20rail.png)
 
-[stl file](Projects/Holder_Ball_Bearing_1mm_off/Holder_Ball_Bearing_1mm_off.stl) &
-[dwg file](Projects/Holder_Ball_Bearing_1mm_off/Holder_Ball_Bearing_1mm_off.dwg)  
+[stl file](Projects/roller_that_works_like_a_holder/roller_that_works_like_a_holder.stl) &
+[dwg file](Projects/roller_that_works_like_a_holder/roller_that_works_like_a_holder.dwg)  
 
 ![Holders for the switches](Pictures/box%20for%20switches.png)
 
