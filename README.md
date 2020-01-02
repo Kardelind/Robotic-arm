@@ -31,4 +31,4 @@ add some code in here, if not all of it
 
 ![Lever for the hand](Pictures/hand%20lever.png)
 [stl file](Projects/Hand%20part/Hand_part.stl) 
-[dwg file](Projects/Hand%20part/Hand_part.dwg) 
+[dwg file](Projects/Hand%20part/Hand%20part.dwg) 
