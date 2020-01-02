@@ -15,11 +15,11 @@ add some code in here, if not all of it
 ## Pictures and files
 ![Ballbearing holder](Pictures/Ballbearingholder.png)
 
-[stl file](Projects/Hand%20part/Hand_part.stl) 
+[stl file](Projects/Hand%20part/Hand_part.stl) /n [dwg file](Projects/Hand%20part/Hand_part.dwg)  
 
 ![Holder for the bolt](Pictures/Holder%20for%20rail.png)
 
-[stl file](Projects/Holder%20for%20rail/Hand_part.stl) 
+[stl file](Projects/Holder%20for%20rail/Holder%20for%20rail.stl) /n [dwg file](Projects/Holder%20for%20rail/Holder%20for%20rail.dwg)  
 
 ![Holders for the switches](Pictures/box%20for%20switches.png)
 
