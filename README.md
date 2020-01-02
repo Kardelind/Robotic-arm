@@ -1,9 +1,10 @@
 # How to use Jekyll
 [Jekyll-theme](https://github.com/mmistakes/jekyll-theme-basically-basic/blob/master/README.md#ruby-gem-method)
 
-# Our report
+## Our report
 [Our report in pdf form](https://drive.google.com/file/d/135nqrgYZVhD_CpQoTayHe5q2DdZN0q2t/view?usp=sharing)
 
+## Pictures and files
 ![Ballbearing holder](Pictures/Ballbearingholder.png)
 
 [stl file](Projects/Hand%20part/Hand_part.stl) 
