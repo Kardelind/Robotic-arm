@@ -3,14 +3,24 @@ Hello there and welcome to our web page for how to make a "simple" EMG controlle
 
 ## How to use Jekyll
 [Jekyll-theme](https://github.com/mmistakes/jekyll-theme-basically-basic/blob/master/README.md#ruby-gem-method)
-
+---
+## Table of content
+1. [Our report](## Our report)
+2. [Filter Code](## Filter Code)
+3. [Sensorboard](## Sensorboard)
+4. [Pictures and files](## Pictures and files)
+5. []()
+---
 ## Our report
 [Our report in pdf form](https://drive.google.com/file/d/135nqrgYZVhD_CpQoTayHe5q2DdZN0q2t/view?usp=sharing)
 
 ## Filter Code
 ```terminal
 add some code in here, if not all of it
+We could just add all the arduino code here
 ```
+## Sensorboard
+Might want a separate part for this
 
 ## Pictures and files
 ![Ballbearing holder](Pictures/Ballbearingholder.png)
@@ -30,5 +40,5 @@ add some code in here, if not all of it
 [dwg file](Projects/sensorholders/sensorholders.dwg) 
 
 ![Lever for the hand](Pictures/hand%20lever.png)
-[stl file](Projects/Hand%20part/Hand_part.stl) 
+[stl file](Projects/Hand%20part/Hand_part.stl) &
 [dwg file](Projects/Hand%20part/Hand%20part.dwg) 
