@@ -16,7 +16,7 @@ add some code in here, if not all of it
 ![Ballbearing holder](Pictures/Ballbearingholder.png)
 
 [stl file](Projects/Holder_Ball_Bearing_1mm_off/Holder_Ball_Bearing_1mm_off.stl) &
-[dwg file](Projects/Holder_Ball_Bearing_1mm_off/Holder_Ball_Bearing_1mm_off.dwg)  
+[dwg file](Projects/Holder_Ball_Bearing_1mm_off/Holder_Ball_bearing_1mm_off.dwg)  
 
 ![Holder for the bolt](Pictures/Holder%20for%20rail.png)
 
