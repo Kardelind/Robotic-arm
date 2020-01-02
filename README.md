@@ -19,7 +19,7 @@ add some code in here, if not all of it
 [dwg file](Projects/Hand%20part/Hand%20part.dwg)  
 
 ![Holder for the bolt](Pictures/Holder%20for%20rail.png)
-Projects/Holder_Ball_Bearing_1mm_off
+
 [stl file](Projects/Holder_Ball_Bearing_1mm_off/Holder_Ball_Bearing_1mm_off.stl) 
 [dwg file](Projects/Holder_Ball_Bearing_1mm_off/Holder_Ball_Bearing_1mm_off.dwg)  
 
