@@ -40,6 +40,6 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 [Our report in pdf form](https://drive.google.com/file/d/135nqrgYZVhD_CpQoTayHe5q2DdZN0q2t/view?usp=sharing)
 
 ![Ballbearing holder](Pictures/Ballbearingholder.png)
-![Holder for the bolt](https://github.com/Kardelind/Robotic-arm/blob/master/Pictures/Holder%20for%20rail.png)
-![Holders for the switches](https://github.com/Kardelind/Robotic-arm/blob/master/Pictures/box%20for%20switches.png)
-![Lever for the hand](https://github.com/Kardelind/Robotic-arm/blob/master/Pictures/hand%20lever.png)
+![Holder for the bolt](Pictures/Holder%20for%20rail.png)
+![Holders for the switches](Pictures/box%20for%20switches.png)
+![Lever for the hand](Pictures/hand%20lever.png)
