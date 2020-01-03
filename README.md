@@ -11,7 +11,7 @@ Hello there and welcome to our web page for how to make a "simple" EMG controlle
 4. [Pictures and files](#Pictures-and-files)
 
 ## Our report
-[Our report in pdf form](https://drive.google.com/file/d/135nqrgYZVhD_CpQoTayHe5q2DdZN0q2t/view?usp=sharing)
+[Our report in pdf form](https://drive.google.com/open?id=1j3nSrF-EyLMKGl6wnu3RESMNdtdDdsQF)
 
 ## Filter Code
 ```terminal
