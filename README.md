@@ -9,6 +9,8 @@ Hello there and welcome to our web page for how to make a "simple" EMG controlle
 2. [Filter Code](#Filter-Code)
 3. [Sensorboard](#Sensorboard)
 4. [Pictures and files](#Pictures-and-files)
+5. [Sprint Schedual](#Sprint-Schedual)
+6. [Project files](#Project-files)
 
 ## Our report
 [Our report in pdf form](https://drive.google.com/open?id=1j3nSrF-EyLMKGl6wnu3RESMNdtdDdsQF)
