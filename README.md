@@ -12,7 +12,7 @@ Hello there and welcome to our web page for how to make a "simple" EMG controlle
 7. [Project files](#project-files)
 
 ## Our report
-[Our report in pdf form](https://drive.google.com/open?id=1j3nSrF-EyLMKGl6wnu3RESMNdtdDdsQF)
+[Our report in pdf form](https://drive.google.com/open?id=12bxFbVB4nVtl8Od4FbTfcNld1QJK4DD5)
 
 ## Movie presentation
 {% include youtube_embed.html id="Ifyh3R_fL7w" %}  
