@@ -26,46 +26,46 @@ Hello there and welcome to our web page for how to make a "simple" EMG controlle
 #include <MultiStepper.h>
 
 //Out from Arduino
-#define dirPin 8              //DIR to D8 (pin 11)
-#define stepPin 9             //STP to D9 (pin 12)
-#define motorInterfaceType 1  //Needed for driver with dir and stp
-#define digiStop 2            //Digital pin for switch
+#define dirPin 8                                      //DIR to D8 (pin 11)
+#define stepPin 9                                     //STP to D9 (pin 12)
+#define motorInterfaceType 1                          //Needed for driver with dir and stp
+#define digiStop 2                                    //Digital pin for switch
 //Define motor pins
-#define motorPin1 4           //D4 (pin 7)
-#define motorPin2 3           //D3 (pin 
-#define motorPin3 5           //D5 (pin
-#define motorPin4 6           //D6 (pin
+#define motorPin1 4                                   //D4 (pin 7)
+#define motorPin2 3                                   //D3 (pin 
+#define motorPin3 5                                   //D5 (pin
+#define motorPin4 6                                   //D6 (pin
 
 //Global variables
-#define arrayLength 200                      //Array length of RMS window
+#define arrayLength 200                               //Array length of RMS window
 
 //Define step constants
 #define HALFSTEP 8
 
 //Inputs outputs 
-int analogPin1 = A0;                         //Analog pin A0
+int analogPin1 = A0;                                  //Analog pin A0
 int analogPin2 = A1; 
 
 //Switch detection
 int grip = LOW;
 
 //Arrays saving data
-  float unfiltered_array[arrayLength];       //Raw input data
+  float unfiltered_array[arrayLength];                //Raw input data
   float unfiltered_array2[arrayLength];
-  float notch_array[arrayLength];            //ARRAY FOR SAVING DATA
+  float notch_array[arrayLength];                     //ARRAY FOR SAVING DATA
   float notch_array2[arrayLength];
   //ALWAYS AN ARRAY WITH just 2 NUMBERS
   float LP_array[] = {0.0, 0.0};
   float HP_array[] = {0.0, 0.0};
   float LP_array2[] = {0.0, 0.0};
   float HP_array2[] = {0.0, 0.0};
-  int n = 1;                                   //int for last element in short array
+  int n = 1;                                            //int for last element in short array
 
 //LOW AND HIGHPASS
-  int sampleRate = 2000;                  //Sampling in Hz  (1/(executiontime+delay)?
-  float dt = 1.0/sampleRate;              //Convert to time
-  int LP_F = 50;                          //Cut off frequencies higher than (LP_F)
-  int HP_F = 15;                          //Let frequencies higher than (HP_F) pass through
+  int sampleRate = 2000;                                //Sampling in Hz  (1/(executiontime+delay)
+  float dt = 1.0/sampleRate;                            //Convert to time
+  int LP_F = 50;                                        //Cut off frequencies higher than (LP_F)
+  int HP_F = 15;                                        //Let frequencies higher than (HP_F) pass through
   float LP_RC = 1.0/(LP_F*2*3.14);
   float HP_RC = 1.0/(HP_F*2*3.14);
   float LP_alpha = dt/(LP_RC+dt);
@@ -88,8 +88,8 @@ int grip = LOW;
   float bandstop2;
 
 //RMS
-  double rootMeanSq;                                  //RMS from one input
-  double rootMeanSq2;                                 //RMS from second input
+  double rootMeanSq;                                     //RMS from one input
+  double rootMeanSq2;                                    //RMS from second input
   
 //Define motorobject
 AccelStepper stepFlexExt(motorInterfaceType, stepPin, dirPin);
@@ -116,12 +116,12 @@ void setup() {
   //Digital input for switch
   pinMode(digiStop, INPUT);
   
-  //Serial.begin(38400);                              //For observing the 
+  //Serial.begin(38400);                                  //For observing the 
 }
 
 void loop() {
-  int data = analogRead(analogPin1);                  // INT between 0-1023
-  unfiltered_array[arrayLength-1] = data;             //last in array eg. 49 
+  int data = analogRead(analogPin1);                      // INT between 0-1023
+  unfiltered_array[arrayLength-1] = data;                 //last in array eg. 49 
   int data2 = analogRead(analogPin2);
   unfiltered_array2[arrayLength-1] = data2;
   
@@ -133,7 +133,7 @@ void loop() {
   HP_array[n] = HP_alpha*(HP_array[n-1]+LP_array[n]-LP_array[n-1]);
 
   //NOTCH FILTERING
-  notchLow = (notchLow_alpha*HP_array[n]) + ((1-notchLow_alpha)*HP_array[n-1]); //TALK ABOUT USING FILTERED/NONFILTERED SIGNALS
+  notchLow = (notchLow_alpha*HP_array[n]) + ((1-notchLow_alpha)*HP_array[n-1]); 
   notchHigh = (notchHigh_alpha*HP_array[n]) + ((1-notchHigh_alpha)*HP_array[n-1]);
   bandpass = notchHigh - notchLow;
   bandstop = HP_array[n] - bandpass;
@@ -146,16 +146,16 @@ void loop() {
   HP_array2[n] = HP_alpha*(HP_array2[n-1]+LP_array2[n]-LP_array2[n-1]);
 
   //NOTCH FILTERING2
-  notchLow2 = (notchLow_alpha*HP_array2[n]) + ((1-notchLow_alpha)*HP_array2[n-1]); //TALK ABOUT USING FILTERED/NONFILTERED SIGNALS
+  notchLow2 = (notchLow_alpha*HP_array2[n]) + ((1-notchLow_alpha)*HP_array2[n-1]); 
   notchHigh2 = (notchHigh_alpha*HP_array2[n]) + ((1-notchHigh_alpha)*HP_array2[n-1]);
   bandpass2 = notchHigh2 - notchLow2;
   bandstop2 = HP_array2[n] - bandpass2;
   notch_array2[arrayLength-1] = bandstop2;
   
   //MOVING RMS WINDOW
-  float v = 0.0;                                      //Always zero before new RMS count
+  float v = 0.0;                                          //Always zero before new RMS count
   float sum = 0.0;
-  float v2 = 0.0;                                     //Always zero before new RMS2 count
+  float v2 = 0.0;                                         //Always zero before new RMS2 count
   float sum2 = 0.0;
   for (int i = 0; i < arrayLength; i++) {
     sum += notch_array[i]*notch_array[i];
@@ -163,7 +163,7 @@ void loop() {
   }
   v = sum/arrayLength;
   v2 = sum2/arrayLength;
-  rootMeanSq = sqrt(v);                               //Calculated RMS of arrayLength
+  rootMeanSq = sqrt(v);                                   //Calculated RMS of arrayLength
   rootMeanSq2 = sqrt(v2);
 
   //STORING IN ARRAY
@@ -177,10 +177,10 @@ void loop() {
     unfiltered_array2[i] = unfiltered_array2[i+1];
     notch_array2[i] = notch_array2[i+1];
   }
-  /*Serial.print(rootMeanSq);                         //Print out Root mean square value
+  /*Serial.print(rootMeanSq);                            //Print out Root mean square value
   Serial.print(", ");
   Serial.print(rootMeanSq2);*/
-  if(rootMeanSq < 80 || rootMeanSq2 < 80){            //Removing sudden high amplitude noice
+  if(rootMeanSq < 80 || rootMeanSq2 < 80){               //Removing sudden high amplitude noice
   //Pinch control
     if(rootMeanSq2 > 17 && grip ==HIGH){
       stepPinch.moveTo(stepPinch.currentPosition() -50);
@@ -203,7 +203,7 @@ void loop() {
   //Motor + creating delay until next sensor board readout
   for(int i = 0; i<=25; i++){
     grip = digitalRead(digiStop);
-    if(grip == LOW){                        //If switch 
+    if(grip == LOW){                                      //If switch is connected
       stepPinch.moveTo(stepPinch.currentPosition() );
     } else {
       stepPinch.run();
@@ -211,7 +211,7 @@ void loop() {
     stepFlexExt.run();
     delayMicroseconds(20);
   }
-  /*Serial.print("; ");                     //Observing 
+  /*Serial.print("; ");                                   //Observing input of grip
   Serial.println(grip);*/
 }
 
