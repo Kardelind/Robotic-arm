@@ -15,7 +15,8 @@ Hello there and welcome to our web page for how to make a "simple" EMG controlle
 [Our report in pdf form](https://drive.google.com/open?id=1j3nSrF-EyLMKGl6wnu3RESMNdtdDdsQF)
 
 ## Movie presentation
-<iframe width="420" height="315" src="https://youtu.be/Ifyh3R_fL7w" frameborder="0" allowfullscreen></iframe>
+<iframe width="420" height="315" src="//www.youtube.com/embed/Ifyh3R_fL7w" frameborder="0" allowfullscreen="allowfullscreen">&nbsp;</iframe>
+
 [Movie](https://youtu.be/Ifyh3R_fL7w)
 
 
