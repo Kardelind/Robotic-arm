@@ -195,3 +195,7 @@ Creating our own sensorboard to pick up transmit the EMG signal.
 ![Lever for the hand](Pictures/hand%20lever.png)
 [stl file](Projects/Hand%20part/Hand_part.stl) &
 [dwg file](Projects/Hand%20part/Hand%20part.dwg) 
+
+## Project files
+Here is all of our research and work process:
+https://drive.google.com/open?id=1bXBbQGF10dLjjT2bCN0wZYgyClIOmIcx
