@@ -4,12 +4,12 @@ Hello there and welcome to our web page for how to make a "simple" EMG controlle
 
 ## Table of content
 1. [Our report](#our-report)
-2. [Movie presentation](#Movie-presentation)
-3. [Filter Code](#Filter-Code)
-4. [Sensorboard](#Sensorboard)
-5. [Pictures and files](#Pictures-and-files)
-6. [Sprint Schedual](#Sprint-Schedual)
-7. [Project files](#Project-files)
+2. [Movie presentation](#movie-presentation)
+3. [Filter Code](#filter-Code)
+4. [Sensorboard](#sensorboard)
+5. [Pictures and files](#pictures-and-files)
+6. [Sprint Schedual](#sprint-Schedual)
+7. [Project files](#project-files)
 
 ## Our report
 [Our report in pdf form](https://drive.google.com/open?id=1j3nSrF-EyLMKGl6wnu3RESMNdtdDdsQF)
