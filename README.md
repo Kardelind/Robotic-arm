@@ -28,16 +28,26 @@ Hello there and welcome to our web page for how to make a "simple" EMG controlle
 //Out from Arduino
 #define dirPin 8              //DIR to D8 (pin 11)
 #define stepPin 9             //STP to D9 (pin 12)
-//#define enPin 7               //enable D7 (pin 10)
 #define motorInterfaceType 1  //Needed for driver with dir and stp
+#define digiStop 2            //Digital pin for switch
+//Define motor pins
+#define motorPin1 4           //D4 (pin 7)
+#define motorPin2 3           //D3 (pin 
+#define motorPin3 5           //D5 (pin
+#define motorPin4 6           //D6 (pin
 
 //Global variables
 #define arrayLength 200                      //Array length of RMS window
 
+//Define step constants
+#define HALFSTEP 8
+
 //Inputs outputs 
-int analogPin1 = A0;                         //Analog input port at port 6 (BICEP)
+int analogPin1 = A0;                         //Analog pin A0
 int analogPin2 = A1; 
-//int ex_outputPort_1 = 10;                 //Digital output port at pott 10, not needed
+
+//Switch detection
+int grip = LOW;
 
 //Arrays saving data
   float unfiltered_array[arrayLength];       //Raw input data
@@ -53,17 +63,17 @@ int analogPin2 = A1;
 
 //LOW AND HIGHPASS
   int sampleRate = 2000;                  //Sampling in Hz  (1/(executiontime+delay)?
-  float dt = 1.0/sampleRate;
-  int LP_F = 50;       
-  int HP_F = 15;        
+  float dt = 1.0/sampleRate;              //Convert to time
+  int LP_F = 50;                          //Cut off frequencies higher than (LP_F)
+  int HP_F = 15;                          //Let frequencies higher than (HP_F) pass through
   float LP_RC = 1.0/(LP_F*2*3.14);
   float HP_RC = 1.0/(HP_F*2*3.14);
   float LP_alpha = dt/(LP_RC+dt);
   float HP_alpha = HP_RC/(HP_RC+dt);
 
 //NOTCH
-  int notchLowF = 49;     
-  int notchHighF = 51;  
+  int notchLowF = 49;                                   //Lower end of notch filter frequency
+  int notchHighF = 51;                                  //Higher end of notch filter frequency
   float notchLowRC = 1.0/(notchLowF*2*3.14);            //Changed from notchLoWRC -> notchLowF
   float notchHighRC = 1.0/(notchHighF*2*3.14);
   float notchLow_alpha = dt/(notchLowRC+dt);
@@ -79,10 +89,11 @@ int analogPin2 = A1;
 
 //RMS
   double rootMeanSq;                                  //RMS from one input
-  double rootMeanSq2;
+  double rootMeanSq2;                                 //RMS from second input
   
 //Define motorobject
 AccelStepper stepFlexExt(motorInterfaceType, stepPin, dirPin);
+AccelStepper stepPinch(HALFSTEP, motorPin1, motorPin3, motorPin2, motorPin4);
   
 void setup() {
   //Fill arrays with zeros
@@ -92,16 +103,25 @@ void setup() {
   notch_array[i] = 0.0;
   notch_array2[i] = 0.0;
   }
+  
+  //Set up motors
   stepFlexExt.setMaxSpeed(1200.0);
   stepFlexExt.setAcceleration(230.0);
   stepFlexExt.setCurrentPosition(0.0);
-  Serial.begin(38400); //CHANGE NUMBER PERHAPS? 
+  stepPinch.setMaxSpeed(1000.0);
+  stepPinch.setSpeed(0);
+  stepPinch.setAcceleration(150.0);
+  stepPinch.setCurrentPosition(0);
+  
+  //Digital input for switch
+  pinMode(digiStop, INPUT);
+  
+  //Serial.begin(38400);                              //For observing the 
 }
 
 void loop() {
-  int data = analogRead(analogPin1);          // INT between 0-1023
-  //float inVolt = data*3.300/1023.000;             //CONVERSION BACK TO VOLTS
-  unfiltered_array[arrayLength-1] = data;  //last in array eg. 49 
+  int data = analogRead(analogPin1);                  // INT between 0-1023
+  unfiltered_array[arrayLength-1] = data;             //last in array eg. 49 
   int data2 = analogRead(analogPin2);
   unfiltered_array2[arrayLength-1] = data2;
   
@@ -119,7 +139,7 @@ void loop() {
   bandstop = HP_array[n] - bandpass;
   notch_array[arrayLength-1] = bandstop;
 
-//LOWPASS FILTERING2
+  //LOWPASS FILTERING2
   LP_array2[n] = LP_alpha*unfiltered_array2[arrayLength-1] + (1-LP_alpha)*LP_array2[n-1]; 
   
   //HIGHPASS FILTERING2
@@ -133,9 +153,9 @@ void loop() {
   notch_array2[arrayLength-1] = bandstop2;
   
   //MOVING RMS WINDOW
-  float v = 0.0;                                     //Always zero before new RMS count
+  float v = 0.0;                                      //Always zero before new RMS count
   float sum = 0.0;
-  float v2 = 0.0;                                     //Always zero before new RMS count
+  float v2 = 0.0;                                     //Always zero before new RMS2 count
   float sum2 = 0.0;
   for (int i = 0; i < arrayLength; i++) {
     sum += notch_array[i]*notch_array[i];
@@ -143,7 +163,7 @@ void loop() {
   }
   v = sum/arrayLength;
   v2 = sum2/arrayLength;
-  rootMeanSq = sqrt(v);                             //Calculated RMS of arrayLength
+  rootMeanSq = sqrt(v);                               //Calculated RMS of arrayLength
   rootMeanSq2 = sqrt(v2);
 
   //STORING IN ARRAY
@@ -151,32 +171,50 @@ void loop() {
   HP_array[n-1] = HP_array[n];
   LP_array2[n-1] = LP_array2[n];
   HP_array2[n-1] = HP_array2[n];
-  for(int i = 0; i < arrayLength-1; i++){               //Until element 48 
+  for(int i = 0; i < arrayLength-1; i++){                
     unfiltered_array[i] = unfiltered_array[i+1];
     notch_array[i] = notch_array[i+1];
     unfiltered_array2[i] = unfiltered_array2[i+1];
     notch_array2[i] = notch_array2[i+1];
   }
-  Serial.print(rootMeanSq);
+  /*Serial.print(rootMeanSq);                         //Print out Root mean square value
   Serial.print(", ");
-  Serial.println(rootMeanSq2);
-  if(rootMeanSq < 80 /*|| rootMeanSq2 < 80*/){
-    /*if(rootMeanSq >= 5 && rootMeanSq <= 30){
+  Serial.print(rootMeanSq2);*/
+  if(rootMeanSq < 80 || rootMeanSq2 < 80){            //Removing sudden high amplitude noice
+  //Pinch control
+    if(rootMeanSq2 > 17 && grip ==HIGH){
+      stepPinch.moveTo(stepPinch.currentPosition() -50);
+    }
+    if(rootMeanSq2 < 5){
+      stepPinch.moveTo(stepPinch.currentPosition() +50);
+    }
+  //Fextion/extension control
+    if(rootMeanSq >6 && rootMeanSq < 23){
       stepFlexExt.moveTo(stepFlexExt.currentPosition() );
-    }else{*/
-      if(rootMeanSq > 30  && stepFlexExt.currentPosition() <= 9198){
+    }else{
+      if(rootMeanSq > 23  && stepFlexExt.currentPosition() <= 9190){
         stepFlexExt.moveTo(stepFlexExt.currentPosition() + 1200);
       }
       if(rootMeanSq < 5 && stepFlexExt.currentPosition()> 1200){
         stepFlexExt.moveTo(stepFlexExt.currentPosition() - 1200);
       }
-   // }
+    }
   }
-  for(int i = 0; i<=10; i++){
-  stepFlexExt.run();
-  delayMicroseconds(50);
+  //Motor + creating delay until next sensor board readout
+  for(int i = 0; i<=25; i++){
+    grip = digitalRead(digiStop);
+    if(grip == LOW){                        //If switch 
+      stepPinch.moveTo(stepPinch.currentPosition() );
+    } else {
+      stepPinch.run();
+    }
+    stepFlexExt.run();
+    delayMicroseconds(20);
   }
+  /*Serial.print("; ");                     //Observing 
+  Serial.println(grip);*/
 }
+
 ```
 ## Sensorboard
 Creating our own sensorboard to pick up transmit the EMG signal.
