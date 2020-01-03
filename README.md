@@ -20,7 +20,7 @@ We could just add all the arduino code here
 ```
 ## Sensorboard
 Creating our own sensorboard to pick up transmit the EMG signal.
-![Sensorboard](Picture/SensorBoard.png)
+![Sensorboard](Pictures/SensorBoard.png)
 
 ## Pictures and files
 ![Ballbearing holder](Pictures/Ballbearingholder.png)
