@@ -5,7 +5,7 @@ Hello there and welcome to our web page for how to make a "simple" EMG controlle
 ## Table of content
 1. [Our report](#our-report)
 2. [Movie presentation](#movie-presentation)
-3. [Filter Code](#filter-Code)
+3. [Filter Code](#filter-code)
 4. [Sensorboard](#sensorboard)
 5. [Pictures and files](#pictures-and-files)
 6. [Sprint Schedual](#sprint-Schedual)
