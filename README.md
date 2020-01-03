@@ -200,5 +200,4 @@ Creating our own sensorboard to pick up transmit the EMG signal.
 [Our sprint schedual](https://drive.google.com/open?id=1MaNDce9rP6RRyLRTfPT3aKyGw1Nl4HoCjJTL1nX9wjU)
 
 ## Project files
-Here is all of our research and work process:
-https://drive.google.com/open?id=1bXBbQGF10dLjjT2bCN0wZYgyClIOmIcx
+[Here is everything collected so that you can do the same as us](https://drive.google.com/open?id=1bXBbQGF10dLjjT2bCN0wZYgyClIOmIcx)
