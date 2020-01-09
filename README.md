@@ -240,7 +240,7 @@ Creating our own sensorboard to pick up transmit the EMG signal.
 ![Lever for the hand](Pictures/hand%20lever.png)
 [stl file](Projects/Hand%20part/Hand_part.stl) &
 [dwg file](Projects/Hand%20part/Hand%20part.dwg) 
-
+ 
 ## Sprint Schedual
 [Our sprint schedual](https://drive.google.com/open?id=1MaNDce9rP6RRyLRTfPT3aKyGw1Nl4HoCjJTL1nX9wjU)
 
