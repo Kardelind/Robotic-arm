@@ -7,7 +7,7 @@ Every member was assigned different responsibilities.
 Viktor Stedt (vstedt@kth.se) - Sensor board
 Henrik Malmberg (hmalmbe@kth.se) - Arduino code and Motor code
 Jonathan Kardelind - Structure
-Paulo Cruz - Arduino code
+Paulo Cruz (paulocn@kth.se) - Arduino code
 Mogos Tesfaldet - Arduino code
 ```
 
