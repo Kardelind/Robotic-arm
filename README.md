@@ -1,11 +1,18 @@
 # How I stopped fearing robotics and came to love arduinos
 Hello there and welcome to our web page for how to make a "simple" EMG controlled prosthetic. Here you'll find a link to the report , schematics for the senor boards used in this project, arduino code used in the project, 3D print files in both 3D print ready format (stl) and editable format (dwg).  
 
+## Members
+Every member was assigned different responsibilities. 
+Viktor Stedt (vstedt@kth.se) - Sensor board
+Henrik Malmberg (hmalmbe@kth.se) - Arduino code and Motor code
+Jonathan Kardelind - Structure
+Paulo Cruz - Arduino code
+Mogos Tesfaldet - Arduino code
 
 ## Table of content
 1. [Our report](#our-report)
 2. [Movie presentation](#movie-presentation)
-3. [Filter Code](#filter-code)
+3. [Arduino code](#Arduino-code)
 4. [Sensorboard](#sensorboard)
 5. [Pictures and files](#pictures-and-files)
 6. [Sprint Schedual](#sprint-Schedual)
@@ -20,7 +27,7 @@ Hello there and welcome to our web page for how to make a "simple" EMG controlle
 [Movie](https://youtu.be/Ifyh3R_fL7w)
 
 
-## Filter Code
+## Arduino Code
 ```terminal
 #include <AccelStepper.h>
 #include <MultiStepper.h>
