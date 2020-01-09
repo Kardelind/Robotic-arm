@@ -3,13 +3,13 @@ Hello there and welcome to our web page for how to make a "simple" EMG controlle
 
 ## Members
 Every member was assigned different responsibilities. 
-`
+```terminal
 Viktor Stedt (vstedt@kth.se) - Sensor board
 Henrik Malmberg (hmalmbe@kth.se) - Arduino code and Motor code
 Jonathan Kardelind - Structure
 Paulo Cruz - Arduino code
 Mogos Tesfaldet - Arduino code
-`
+```
 
 ## Table of content
 1. [Our report](#our-report)
