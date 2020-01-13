@@ -44,9 +44,9 @@ Mogos Tesfaldet                                           - Arduino code
 #define digiStop 2                                    //Digital pin for switch
 //Define motor pins
 #define motorPin1 4                                   //D4 (pin 7)
-#define motorPin2 3                                   //D3 (pin 
-#define motorPin3 5                                   //D5 (pin
-#define motorPin4 6                                   //D6 (pin
+#define motorPin2 3                                   //D3 (pin 6)
+#define motorPin3 5                                   //D5 (pin 8)
+#define motorPin4 6                                   //D6 (pin 9)
 
 //Global variables
 #define arrayLength 200                               //Array length of RMS window
