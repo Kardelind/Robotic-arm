@@ -30,7 +30,7 @@ Mogos Tesfaldet                                           - Arduino code
 [Movie](https://youtu.be/Ifyh3R_fL7w)
 
 ## System schematics
-(Pictures/Flowchart.png)
+![Flowchart](Pictures/Flowchart.png)
 
 ## Arduino Code
 ```terminal
