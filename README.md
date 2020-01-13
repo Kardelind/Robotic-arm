@@ -231,7 +231,7 @@ void loop() {
 ## Sensorboard
 Creating our own sensorboard to pick up transmit the EMG signal.
 ![Sensorboard](Pictures/SensorBoard.png)
-[upv file](Projects/Roboticarm_openjson.upv)
+[Upvert file](Projects/Roboticarm_openjson.upv)
 
 ## Pictures and files
 ![Ballbearing holder](Pictures/Ballbearingholder.png)
