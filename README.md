@@ -14,11 +14,11 @@ Mogos Tesfaldet                                           - Arduino code
 ## Table of content
 1. [Our report](#our-report)
 2. [Movie presentation](#movie-presentation)
-3. [System schematics].(#system-schematics)
+3. [Flowchart](#Flowchart)
 4. [Arduino code](#Arduino-code)
 5. [Sensorboard](#sensorboard)
 6. [Pictures and files](#pictures-and-files)
-7. [Sprint Schedual](#sprint-Schedual)
+7. [Sprint Schedule](#sprint-Schedule)
 8. [Project files](#project-files)
 
 ## Our report
@@ -29,7 +29,7 @@ Mogos Tesfaldet                                           - Arduino code
 
 [Movie](https://youtu.be/Ifyh3R_fL7w)
 
-## System schematics
+## Flowchart
 ![Flowchart](Pictures/Flowchart.png)
 
 ## Arduino Code
@@ -254,8 +254,8 @@ Creating our own sensorboard to pick up transmit the EMG signal.
 [stl file](Projects/Hand%20part/Hand_part.stl) &
 [dwg file](Projects/Hand%20part/Hand%20part.dwg) 
  
-## Sprint Schedual
-[Our sprint schedual](https://drive.google.com/open?id=1MaNDce9rP6RRyLRTfPT3aKyGw1Nl4HoCjJTL1nX9wjU)
+## Sprint Schedule
+[Our sprint schedule](https://drive.google.com/open?id=1MaNDce9rP6RRyLRTfPT3aKyGw1Nl4HoCjJTL1nX9wjU)
 
 ## Project files
 [Here is everything collected so that you can do the same as us](https://drive.google.com/open?id=1bXBbQGF10dLjjT2bCN0wZYgyClIOmIcx)
