@@ -14,11 +14,12 @@ Mogos Tesfaldet                                           - Arduino code
 ## Table of content
 1. [Our report](#our-report)
 2. [Movie presentation](#movie-presentation)
-3. [Arduino code](#Arduino-code)
-4. [Sensorboard](#sensorboard)
-5. [Pictures and files](#pictures-and-files)
-6. [Sprint Schedual](#sprint-Schedual)
-7. [Project files](#project-files)
+3. [System schematics].(#system-schematics)
+4. [Arduino code](#Arduino-code)
+5. [Sensorboard](#sensorboard)
+6. [Pictures and files](#pictures-and-files)
+7. [Sprint Schedual](#sprint-Schedual)
+8. [Project files](#project-files)
 
 ## Our report
 [Our report in pdf form](https://drive.google.com/open?id=12bxFbVB4nVtl8Od4FbTfcNld1QJK4DD5)
@@ -28,6 +29,8 @@ Mogos Tesfaldet                                           - Arduino code
 
 [Movie](https://youtu.be/Ifyh3R_fL7w)
 
+## System schematics
+(Pictures/Flowchart.png)
 
 ## Arduino Code
 ```terminal
